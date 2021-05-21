@@ -6,11 +6,11 @@
 //
 
 public struct ActivityList: Codable {
-    public let items: [Activity]
+    public let items: [Activity]?
     public let nextPageToken: String?
-    public let etag: String
-    public let kind: String
-    public let pageInfo: PageInfo
+    public let etag: String?
+    public let kind: String?
+    public let pageInfo: PageInfo?
     
     public init(items: [Activity],
                 nextPageToken: String,
@@ -26,15 +26,15 @@ public struct ActivityList: Codable {
 }
 
 public struct Activity: Codable {
-    public let etag: String
-    public let kind: String
+    public let etag: String?
+    public let kind: String?
     public let contentDetails: ContentDetails.ActivityList?
-    public let id: String
-    public let snippet: Snippet.ActivityList?
+    public let id: String?
+    public let snippet: Snippet.ActivityList??
 }
 
 public struct Upload: Codable {
-    public let videoID: String
+    public let videoID: String?
     
     public enum CodingKeys: String, CodingKey {
         case videoID = "videoId"

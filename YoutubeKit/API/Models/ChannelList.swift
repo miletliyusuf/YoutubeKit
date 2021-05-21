@@ -8,10 +8,10 @@
 import Foundation
 
 public struct ChannelList: Codable {
-    public let etag: String
-    public let items: [Channel]
-    public let kind: String
-    public let pageInfo: PageInfo
+    public let etag: String?
+    public let items: [Channel]?
+    public let kind: String?
+    public let pageInfo: PageInfo?
     public let nextPageToken: String?
     public let prevPageToken: String?
 }
@@ -19,9 +19,9 @@ public struct ChannelList: Codable {
 public struct Channel: Codable {
     public let brandingSettings: BrandingSettings?
     public let contentDetails: ContentDetails.ChannelList?
-    public let etag: String
-    public let id: String
-    public let kind: String
+    public let etag: String?
+    public let id: String?
+    public let kind: String?
     public let snippet: Snippet.ChannelList?
     public let statistics: Statistics.ChannelList?
     public let topicDetails: TopicDetails?
@@ -44,7 +44,7 @@ public struct RelatedPlaylists: Codable {
 }
 
 public struct BrandingSettings: Codable {
-    public let channelMetadata: ChannelMetadata
+    public let channelMetadata: ChannelMetadata?
     public let hints: [Hint]?
     public let image: Image?
     
