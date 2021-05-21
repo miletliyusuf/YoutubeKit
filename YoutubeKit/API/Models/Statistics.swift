@@ -25,7 +25,7 @@ extension Statistics {
         public let commentCount: String?
         public let hiddenSubscriberCount: Bool?
         public let subscriberCount: String?
-        public let videoCount: String
-        public let viewCount: String
+        public let videoCount: String?
+        public let viewCount: String?
     }
 }
