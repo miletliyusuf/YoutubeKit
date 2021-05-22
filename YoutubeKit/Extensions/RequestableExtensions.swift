@@ -18,7 +18,7 @@ extension Requestable {
     }
     
     public var headerField: [String: String] {
-        var header: [String: String] = [:]
+        var header: [String: String] = ["X-Ios-Bundle-Identifier": Bundle.main.bundleIdentifier ?? ""]
         if isAuthorizedRequest {
             header["Authorization"] = "Bearer \(YoutubeKit.shared.accessToken)"
         }
