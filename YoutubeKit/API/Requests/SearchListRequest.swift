@@ -58,6 +58,7 @@ public struct SearchListRequest: Requestable {
         q.appendingQueryParameter(key: "publishedAfter", value: publishedAfter)
         q.appendingQueryParameter(key: "publishedBefore", value: publishedBefore)
         q.appendingQueryParameter(key: "regionCode", value: regionCode)
+        q.appendingQueryParameter(key: "relevanceLanguage", value: relevanceLanguage)
         q.appendingQueryParameter(key: "safeSearch", value: safeSearch)
         q.appendingQueryParameter(key: "videoCaption", value: videoCaption)
         q.appendingQueryParameter(key: "videoDefinition", value: videoDefinition)
@@ -89,6 +90,7 @@ public struct SearchListRequest: Requestable {
     public let publishedBefore: Date?
     public let searchQuery: String?
     public let regionCode: String?
+    public let relevanceLanguage: String?
     public let safeSearch: SearchSafeMode?
     public let topicID: String?
     public let resourceType: [SearchResourceType]?
@@ -114,6 +116,7 @@ public struct SearchListRequest: Requestable {
                 publishedAfter: Date? = nil,
                 publishedBefore: Date? = nil,
                 searchQuery: String? = nil,
+                relevanceLanguage: String? = nil,
                 regionCode: String? = nil,
                 safeSearch: SearchSafeMode? = nil,
                 topicID: String? = nil,
@@ -140,6 +143,7 @@ public struct SearchListRequest: Requestable {
         self.publishedBefore = publishedBefore
         self.searchQuery = searchQuery
         self.regionCode = regionCode
+        self.relevanceLanguage = relevanceLanguage
         self.safeSearch = safeSearch
         self.topicID = topicID
         self.resourceType = resourceType
